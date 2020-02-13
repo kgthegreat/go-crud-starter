@@ -1,0 +1,33 @@
+{{define "topic-details"}}
+<div class="card">
+
+
+    <div class="card-body">
+        <a href="/" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </a>
+        <h5 class="card-title">{{ .Title}}</h5>
+        <p class="card-text">{{ .CreatedAt}}</p>
+        <ul class="list-group">
+
+            <a href="/">    <li class="list-group-item">this was not done </li></a>
+            <a href="/">    <li class="list-group-item">more needs to be done </li></a>
+
+        </ul>
+
+        <hr>
+
+        <form action="/comments" method="post" class="form-inline">
+    
+            <div class="form-group col-9">
+                <input type="input" autofocus="autofocus" name="topic" class="form-control col-12" placeholder="Add Comment">
+            </div>
+    
+            <button type="submit" class="btn btn-primary col-3">Submit</button>
+    
+        </form>
+
+    </div>
+</div>
+
+{{end}}

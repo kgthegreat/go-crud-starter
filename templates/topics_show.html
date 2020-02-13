@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    {{template "header"}}
+    <body>
+        <div class="container-fluid">
+            {{ template "navbar"}}
+            <div class="jumbotron">
+                <h3>Rogi Asder</h3>
+                <hr></hr>
+                <div class="row">
+                    <div class="col-8">
+                        {{ template "_topics_list" .Topics}}
+                        <hr></hr>
+                        {{template "topic-add"}}
+                    </div>
+                    <div class="col-4">
+                        {{ template "topic-details" .Topic}}
+                    </div>
+                </div>
+    </body>
+</html>
