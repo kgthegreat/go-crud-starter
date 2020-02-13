@@ -9,12 +9,12 @@
                 <hr></hr>
                 <div class="row">
                     <div class="col-8">
-                        {{ template "_topics_list" .Topics}}
+                        {{ template "_list" .Topics}}
                         <hr></hr>
-                        {{template "topic-add"}}
+                        {{template "_add"}}
                     </div>
                     <div class="col-4">
-                        {{ template "topic-details" .Topic}}
+                        {{ template "_details" .Topic}}
                     </div>
                 </div>
     </body>

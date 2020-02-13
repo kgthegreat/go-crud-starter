@@ -1,4 +1,4 @@
-{{ define "_topics_list"}}
+{{ define "_list"}}
 <ul class="list-group">
     {{ range $k, $v := .}}
     <a href="/topics/{{$v.ID}}">    <li class="list-group-item">{{$v.Title}} </li></a>

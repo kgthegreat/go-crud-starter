@@ -9,11 +9,13 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/kgthegreat/meeteffective/config"
 	"github.com/kgthegreat/meeteffective/database"
+	"github.com/kgthegreat/meeteffective/util"
 )
 
 type App struct {
-	Config   config.Config
-	Database *database.SqliteDB
+	Config     config.Config
+	Database   *database.SqliteDB
+	TmplHelper *util.Tmpl
 }
 
 func New(cfg config.Config) *App {
@@ -22,7 +24,13 @@ func New(cfg config.Config) *App {
 		log.Fatal(err)
 	}
 
-	return &App{cfg, db}
+	tmplHelper, err := util.NewTmpl(cfg.TemplatesDir, cfg.TemplatesExt, cfg.Env)
+	if err != nil {
+		log.Print("We have an error")
+		log.Fatal(err)
+	}
+
+	return &App{cfg, db, tmplHelper}
 }
 
 func (a *App) Run(r *chi.Mux) {

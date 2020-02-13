@@ -26,7 +26,8 @@ func (topicController *TopicController) GetAll(w http.ResponseWriter, r *http.Re
 
 		NewAppError(&AppError{false, "Could Not Get Topics", http.StatusBadRequest, err}, w)
 	}
-	renderTemplate(w, "topics", &ResponseData{Topics: topics})
+	//	renderTemplate(w, "topic/index", &ResponseData{Topics: topics})
+	topicController.App.TmplHelper.Render(w, "topic/index", &ResponseData{Topics: topics})
 }
 
 func (topicController *TopicController) GetById(w http.ResponseWriter, r *http.Request) {
@@ -44,7 +45,7 @@ func (topicController *TopicController) GetById(w http.ResponseWriter, r *http.R
 	}
 
 	topics, err := topicController.TopicRepository.GetAll()
-	renderTemplate(w, "topics_show",
+	topicController.App.TmplHelper.Render(w, "topic/show",
 		struct {
 			Topics []*models.Topic
 			Topic  *models.Topic

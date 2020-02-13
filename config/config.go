@@ -11,10 +11,12 @@ type SqliteConfig struct {
 }
 
 type Config struct {
-	Env       string       `json:"env"`
-	Sqlite    SqliteConfig `json:"sqlite"`
-	StaticDir string       `json:staticDir`
-	Port      int          `json:port`
+	Env          string       `json:"env"`
+	Sqlite       SqliteConfig `json:"sqlite"`
+	StaticDir    string       `json:staticDir`
+	TemplatesDir string       `json:templatesDir`
+	TemplatesExt string       `json:templatesExt`
+	Port         int          `json:port`
 }
 
 // New creates a new config by reading a json file that matches the types above

@@ -5,6 +5,9 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
+	"path/filepath"
+	"strings"
 	"text/template"
 
 	"github.com/kgthegreat/meeteffective/models"
@@ -26,9 +29,7 @@ func NewAppError(e *AppError, w http.ResponseWriter) {
 		log.Println(e.e)
 	}
 
-	w.Header().Set("Content-Type", "application/json; charset=utf-8")
-	w.WriteHeader(e.Status)
-	fmt.Fprintf(w, e.Message)
+	http.Error(w, e.e.Error(), http.StatusInternalServerError)
 }
 
 func renderTemplate(w http.ResponseWriter, tmpl string, p interface{}) {
@@ -47,7 +48,15 @@ func renderTemplate(w http.ResponseWriter, tmpl string, p interface{}) {
 			}
 			return dict, nil
 		},
-	}).ParseGlob("templates" + "/*"))
+	}), nil)
+
+	filepath.Walk("templates", func(path string, info os.FileInfo, err error) error {
+		if strings.HasSuffix(path, ".html") {
+			templates.ParseFiles(path)
+		}
+
+		return nil
+	})
 
 	err := templates.ExecuteTemplate(w, tmpl+".html", p)
 	if err != nil {
