@@ -22,4 +22,6 @@ It includes
 7. `go get` any missing dependencies 
 7. `go build`
 8. `./app-name`
+9. To build when files change, I have used `https://github.com/cespare/reflex`
+10. `reflex -r '\.go$' -s -- zsh -c "go build && ./app-name"`
 
