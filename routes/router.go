@@ -7,9 +7,9 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/chi/middleware"
 
-	"github.com/kgthegreat/meeteffective/app"
-	"github.com/kgthegreat/meeteffective/controllers"
-	"github.com/kgthegreat/meeteffective/repositories"
+	"github.com/kgthegreat/go-crud-starter/app"
+	"github.com/kgthegreat/go-crud-starter/controllers"
+	"github.com/kgthegreat/go-crud-starter/repositories"
 )
 
 func NewRouter(a *app.App) *chi.Mux {

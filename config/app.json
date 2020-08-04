@@ -1,0 +1,10 @@
+{
+  "env": "local",
+  "sqlite": {
+    "database": "/path/to/go-crud-starter.db"
+    },              
+  "port": 8080,
+  "staticDir": "/absolute/path/to/go-crud-starter/static",
+  "templatesDir": "/absolute/path/to/project/go-crud-starter/templates",
+  "templatesExt": ".html"
+}

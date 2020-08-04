@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/go-chi/chi"
-	"github.com/kgthegreat/meeteffective/config"
-	"github.com/kgthegreat/meeteffective/database"
-	"github.com/kgthegreat/meeteffective/util"
+	"github.com/kgthegreat/go-crud-starter/config"
+	"github.com/kgthegreat/go-crud-starter/database"
+	"github.com/kgthegreat/go-crud-starter/util"
 )
 
 type App struct {

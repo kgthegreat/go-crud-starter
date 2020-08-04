@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	"github.com/kgthegreat/meeteffective/app"
-	"github.com/kgthegreat/meeteffective/config"
-	"github.com/kgthegreat/meeteffective/routes"
+	"github.com/kgthegreat/go-crud-starter/app"
+	"github.com/kgthegreat/go-crud-starter/config"
+	"github.com/kgthegreat/go-crud-starter/routes"
 )
 
 func main() {

@@ -10,7 +10,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/kgthegreat/meeteffective/models"
+	"github.com/kgthegreat/go-crud-starter/models"
 )
 
 type ResponseData struct {

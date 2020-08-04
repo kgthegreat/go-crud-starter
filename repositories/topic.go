@@ -3,8 +3,8 @@ package repositories
 import (
 	"log"
 
-	"github.com/kgthegreat/meeteffective/database"
-	"github.com/kgthegreat/meeteffective/models"
+	"github.com/kgthegreat/go-crud-starter/database"
+	"github.com/kgthegreat/go-crud-starter/models"
 )
 
 type TopicRepository interface {

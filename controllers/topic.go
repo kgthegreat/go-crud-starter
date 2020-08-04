@@ -6,9 +6,9 @@ import (
 	"strconv"
 
 	"github.com/go-chi/chi"
-	"github.com/kgthegreat/meeteffective/app"
-	"github.com/kgthegreat/meeteffective/models"
-	"github.com/kgthegreat/meeteffective/repositories"
+	"github.com/kgthegreat/go-crud-starter/app"
+	"github.com/kgthegreat/go-crud-starter/models"
+	"github.com/kgthegreat/go-crud-starter/repositories"
 )
 
 type TopicController struct {

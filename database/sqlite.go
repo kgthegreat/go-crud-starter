@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"log"
 
-	"github.com/kgthegreat/meeteffective/config"
+	"github.com/kgthegreat/go-crud-starter/config"
 	_ "github.com/mattn/go-sqlite3"
 )
 
