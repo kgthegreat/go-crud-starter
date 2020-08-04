@@ -1,6 +1,6 @@
 # Introduction
 
-go-crud-starter helps to kickstart your go app in style.
+`go-crud-starter` helps to kickstart your go app in style without depending on or learning yet another web framework.
 
 It aims to use very less external dependancy(only 1 for routing, which was chosen carefully but can easily be replaced) but at the same time give a robust code organisation for any go app and introduces dependency injection.
 
@@ -26,5 +26,5 @@ It includes
 9. To build when files change, I have used `https://github.com/cespare/reflex`
 10. `reflex -r '\.go$' -s -- zsh -c "go build && ./app-name"`
 
-Voila - you have your very own go app running. This way you don't have to depend on a framework but still have a way of robust code organisation with dependancy injection.
+Voila - you have your very own go app running. This way you don't have to depend on a framework but still have a way of robust code organisation with dependancy injection. The code organisation is yours to tweak as you like.
 
